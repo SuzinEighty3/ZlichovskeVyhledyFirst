@@ -1,583 +1,271 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zlíchovské výhledy | Projekt</title>
-    <meta name="description" content="Zlíchovské výhledy. 19 unikátních bytů ve dvou nových patrech zavedeného domu.">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Rezidence Kovářská / Poděbradova | Moderní bydlení v centru Plzně</title>
+    <meta name="description" content="Exkluzivní cihlová novostavba v centrální části města Plzně, pouhých 700 metrů od náměstí Republiky. Investiční a rezidenční prémiové byty na prodej.">
+    <meta name="keywords" content="byty Plzeň, novostavba Plzeň, luxusní bydlení Plzeň, reality Plzeň, Rezidence Kovářská Poděbradova">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
+    <!-- JSON-LD SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Broker Consulting, a.s.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jiráskovo náměstí 2",
+        "addressLocality": "Plzeň",
+        "postalCode": "32600",
+        "addressCountry": "CZ"
+      },
+      "telephone": "800100164",
+      "email": "realityspolu@bcas.cz",
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "ApartmentComplex",
+          "name": "Rezidence Kovářská / Poděbradova",
+          "description": "Moderní městské bydlení, 700 m od náměstí Republiky, Plzeň."
+        }
+      }
+    }
+    </script>
+</head>
 <body>
 
-    <!-- NAVIGACE -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#uvod" class="logo">
-                Zlíchovské Výhledy
-            </a>
-            <ul class="nav-links">
-                <li><a href="#o-projektu">O projektu</a></li>
-                <li><a href="#nabidka-bytu">Nabídka bytů</a></li>
-                <li><a href="#standardy">Standardy</a></li>
-                <li><a href="#lokalita">Lokalita</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
+    <!-- Navigace -->
+    <header class="header js-header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="#domu"><strong>Rezidence</strong> <span class="header__logo-sub">Kovářská/Poděbradova</span></a>
+            </div>
+            
+            <nav class="header__nav js-nav">
+                <ul class="header__menu">
+                    <li class="header__item"><a href="#projekt" class="header__link">O projektu</a></li>
+                    <li class="header__item"><a href="#lokace" class="header__link">Lokace</a></li>
+                    <li class="header__item"><a href="#jednotky" class="header__link">Jednotky</a></li>
+                    <li class="header__item"><a href="#kontakt" class="header__link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <a href="#kontakt" class="btn btn--primary header__cta">Mám zájem</a>
+
+            <button class="header__hamburger js-mobile-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
     <main>
-        <!-- SEKCE 1: ÚVOD -->
-        <section id="uvod" class="hero">
-            <div class="hero-content">
-                <h1>Tam, kde se město dotýká přírody.</h1>
-                <p>Zlíchovské výhledy. 19 unikátních bytů posazených nad ruchem města. Kompaktní prostor ve dvou nových
-                    patrech, který vám nabídne pražský horizont z nadhledu.</p>
-                <a href="#nabidka-bytu" class="btn btn-primary">Prohlédnout volné byty</a>
+        <!-- Hero Sekce -->
+        <section class="hero" id="domu">
+            <div class="hero__bg">
+                <img src="assets/images/hero.png" alt="Rezidence Kovářská Poděbradova exteriér večer" class="hero__img" loading="eager"> <!-- Eager protoze je to LCP obrazek -->
             </div>
-        </section>
-
-        <!-- SEKCE 2: O PROJEKTU -->
-        <section id="o-projektu" class="section-padding">
-            <div class="page-header">
-                <h1>Dospělá duše místa. Nový standard života.</h1>
-                <p>Respekt k původní architektuře se snoubí s vizí prostorově nespoutaného bydlení.</p>
-            </div>
-
-            <!-- Vize -->
-            <div class="story-block">
-                <div class="story-content">
-                    <h2>Vize</h2>
-                    <p>Náš projekt nevznikl na zelené louce. Stavíme na hodnotách zavedeného domu s charakterem.
-                        Zlíchovské výhledy nesou esenci místa, které si propůjčily od své minulosti, avšak přinesly do
-                        něj dynamiku současného designu.</p>
-                    <p>Chtěli jsme vytvořit domov, který má dospělou duši – takový, který nabídne útočiště před
-                        dynamikou Prahy, ale zachová její pulzující energii na dosah ruky.</p>
-                </div>
-                <div class="story-image">
-                    <img src="https://loremflickr.com/800/1000/minimalist,architecture/all"
-                        alt="Vize projektu Zlíchovské výhledy">
-                </div>
-            </div>
-
-            <!-- Architektura -->
-            <div class="story-block alt">
-                <div class="story-content">
-                    <h2>Architektura nadstavby</h2>
-                    <p>Zvolili jsme řešení dvou nadstavbových pater s použitím prémiových vícestěnných CLT panelů z
-                        těžkého dřeva. Tento postup nám dává absolutní kontrolu nad každým detailem, statickou čistotou
-                        a environmentálním dopadem.</p>
-                    <p>Forma nadstavby v sobě zrcadlí okolní krajinu. Širokými francouzskými okny prozařuje do interiérů
-                        přirozené světlo, a vzdušné terasy smazávají hranice mezi domovem a horizontem vltavského údolí.
-                    </p>
-                </div>
-                <div class="story-image">
-                    <img src="https://loremflickr.com/800/1000/wooden,modern,building/all"
-                        alt="Architektonické detaily nadstavby">
-                </div>
-            </div>
-
-            <!-- Harmonogram z indexu -->
-            <div style="margin-top: 100px;">
-                <div class="text-center">
-                    <h2>Harmonogram projektu</h2>
-                    <p>Jak se blížíme k vašemu novému domovu</p>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Přelom 2024 / 2025</div>
-                        <div class="timeline-content">
-                            <h3>Zahájení stavby</h3>
-                            <p>Započetí přípravných prací a vlastní výstavby dvou nadstavbových pater.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Léto 2025</div>
-                        <div class="timeline-content">
-                            <h3>Hrubá stavba</h3>
-                            <p>Dokončení hrubé stavby z exkluzivních CLT panelů a osazení oken.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Podzim 2025</div>
-                        <div class="timeline-content">
-                            <h3>Dokončení vnitřních prostor</h3>
-                            <p>Finalizace povrchových úprav a fit-out z prémiových materiálů.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Jaro 2026</div>
-                        <div class="timeline-content">
-                            <h3>Kolaudace a předání</h3>
-                            <p>Slavnostní předání bytů novým majitelům.</p>
-                        </div>
-                    </div>
+            <div class="hero__overlay"></div>
+            
+            <div class="hero__content">
+                <h1 class="hero__title">Moderní městské bydlení v srdci Plzně</h1>
+                <h2 class="hero__subtitle">Exkluzivní cihlová novostavba, pouhých 700 metrů od náměstí Republiky. <br>Plánované dokončení: 1Q 2028.</h2>
+                <div class="hero__actions">
+                    <a href="#jednotky" class="btn btn--primary btn--large">Prozkoumat volné byty</a>
+                    <a href="#projekt" class="btn btn--outline btn--large">Více o projektu</a>
                 </div>
             </div>
         </section>
 
-        <!-- SEKCE 3: NABÍDKA BYTŮ -->
-        <section id="nabidka-bytu" class="page-container" style="padding-top: 100px;">
-            <div class="page-header full-width">
-                <h1>Nabídka bytů</h1>
-                <p>Vyberte si prostor, který se stane vaším novým domovem s výhledem.</p>
-            </div>
-
-            <div class="inventory-grid">
-                <!-- LEVÝ SLOUPEC: SCHEMA PATRA -->
-                <div class="schema-col">
-                    <div class="floor-switch">
-                        <button class="floor-btn active" data-floor="4np">4. NP</button>
-                        <button class="floor-btn" data-floor="5np">5. NP</button>
-                    </div>
-                    <div class="schema-container">
-                        <!-- SVG pro 4.NP s reálným půdorysem jako podkladem -->
-                        <svg id="svg-4np" class="floor-svg" viewBox="0 0 1000 600">
-                            <image href="pudorys-4np.jpg" width="1000" height="600" preserveAspectRatio="xMidYMid slice"
-                                opacity="0.9" />
-
-                            <!-- Zástupné byty - transparentní klikatelné oblasti (ukázka 3 bytů) -->
-                            <g id="flat-401" class="svg-flat" data-flat="401" data-disp="1+kk | 38,92 m²"
-                                data-price="4 950 000 Kč">
-                                <polygon points="30,100 250,100 250,500 30,500" />
-                            </g>
-                            <g id="flat-402" class="svg-flat" data-flat="402" data-disp="1+kk | 37,99 m²"
-                                data-price="7 500 000 Kč">
-                                <polygon points="260,100 450,100 450,500 260,500" />
-                            </g>
-                            <g id="flat-403" class="svg-flat" data-flat="403" data-disp="1+kk | 38,32 m²"
-                                data-price="7 600 000 Kč">
-                                <polygon points="460,100 650,100 650,500 460,500" />
-                            </g>
-                            <!-- Další prostory by se mapovaly stejně -->
-                        </svg>
-
-                        <!-- SVG pro 5.NP s reálným půdorysem jako podkladem -->
-                        <svg id="svg-5np" class="floor-svg" viewBox="0 0 1000 600" style="display:none;">
-                            <image href="pudorys-5np.jpg" width="1000" height="600" preserveAspectRatio="xMidYMid slice"
-                                opacity="0.9" />
-
-                            <g id="flat-501" class="svg-flat" data-flat="501" data-disp="1+kk | 43,62 m²"
-                                data-price="7 700 000 Kč">
-                                <polygon points="50,50 350,50 350,300 50,300" />
-                            </g>
-                            <g id="flat-502" class="svg-flat" data-flat="502" data-disp="1+kk | 32,60 m²"
-                                data-price="11 500 000 Kč">
-                                <polygon points="360,50 650,50 650,300 360,300" />
-                            </g>
-                        </svg>
-                    </div>
+        <!-- O Projektu - Bento Grid -->
+        <section class="bento" id="projekt">
+            <div class="container container--narrow">
+                <div class="bento__header">
+                    <h2 class="section-title">Dokonalost v každém detailu</h2>
+                    <p class="section-desc">Představujeme vám architektonicky výjimečný projekt, který snoubí benefity tradiční výstavby s moderními standardy komfortu.</p>
                 </div>
 
-                <!-- PRAVÝ SLOUPEC: TABULKY BYTŮ A FILTRY -->
-                <div class="table-col">
-                    <div class="filter-controls">
-                        <label class="toggle-wrapper">
-                            <input type="checkbox" class="filter-checkbox" value="status-volny" checked>
-                            <span class="toggle-slider"></span>
-                            Volné
-                        </label>
-                        <label class="toggle-wrapper">
-                            <input type="checkbox" class="filter-checkbox" value="status-pripravovano" checked>
-                            <span class="toggle-slider"></span>
-                            Připravované
-                        </label>
-                        <label class="toggle-wrapper">
-                            <input type="checkbox" class="filter-checkbox" value="status-rezervovano" checked>
-                            <span class="toggle-slider"></span>
-                            Rezervované
-                        </label>
-                        <label class="toggle-wrapper">
-                            <input type="checkbox" class="filter-checkbox" value="status-prodano" checked>
-                            <span class="toggle-slider"></span>
-                            Prodané
-                        </label>
-                    </div>
-
-                    <!-- 4.NP Tabulka -->
-                    <div id="table-4np" class="floor-table-container">
-                        <h2>Patro 4.NP</h2>
-                        <div style="overflow-x: auto; margin-bottom: 2rem;">
-                            <table class="inventory-table" style="margin-top: 1rem;">
-                                <thead>
-                                    <tr>
-                                        <th>Číslo</th>
-                                        <th>Patro</th>
-                                        <th>Dispozice</th>
-                                        <th>Plocha bytu</th>
-                                        <th>Cena bytu</th>
-                                        <th>Stav</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr id="row-401" class="status-volny" data-flat="401">
-                                        <td><strong>401</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>38,92 m²</td>
-                                        <td>4 950 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-402" class="status-volny" data-flat="402">
-                                        <td><strong>402</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>37,99 m²</td>
-                                        <td>7 500 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-403" class="status-rezervovano" data-flat="403">
-                                        <td><strong>403</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>38,32 m²</td>
-                                        <td>7 600 000 Kč</td>
-                                        <td><span class="status reserved">Rezervováno</span></td>
-                                    </tr>
-                                    <tr id="row-404" class="status-volny" data-flat="404">
-                                        <td><strong>404</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>36,10 m²</td>
-                                        <td>11 200 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-405" class="status-volny" data-flat="405">
-                                        <td><strong>405</strong></td>
-                                        <td>4NP</td>
-                                        <td>2+kk</td>
-                                        <td>51,09 m²</td>
-                                        <td>6 990 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-406" class="status-pripravovano" data-flat="406">
-                                        <td><strong>406</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>34,04 m²</td>
-                                        <td>15 500 000 Kč</td>
-                                        <td><span class="status" style="background:#fff3e0;color:#e65100">Připravuje
-                                                se</span></td>
-                                    </tr>
-                                    <tr id="row-407" class="status-rezervovano" data-flat="407">
-                                        <td><strong>407</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>32,34 m²</td>
-                                        <td>5 100 000 Kč</td>
-                                        <td><span class="status reserved">Rezervováno</span></td>
-                                    </tr>
-                                    <tr id="row-408" class="status-volny" data-flat="408">
-                                        <td><strong>408</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>28,70 m²</td>
-                                        <td>7 150 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-409" class="status-volny" data-flat="409">
-                                        <td><strong>409</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>42,45 m²</td>
-                                        <td>10 800 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-410" class="status-volny" data-flat="410">
-                                        <td><strong>410</strong></td>
-                                        <td>4NP</td>
-                                        <td>1+kk</td>
-                                        <td>37,99 m²</td>
-                                        <td>7 850 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="bento__grid">
+                    <article class="bento__item bento__item--wide">
+                        <div class="bento__content">
+                            <h3>Tradiční hodnoty</h3>
+                            <p>7 a 8 nadzemních podlaží s klasickou, osvědčenou <strong>cihlovou konstrukcí</strong>. Maximální akustický komfort a investice, která přetrvá generace.</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- 5.NP Tabulka -->
-                    <div id="table-5np" class="floor-table-container" style="display:none;">
-                        <h2>Patro 5.NP</h2>
-                        <div style="overflow-x: auto;">
-                            <table class="inventory-table" style="margin-top: 1rem;">
-                                <thead>
-                                    <tr>
-                                        <th>Číslo</th>
-                                        <th>Patro</th>
-                                        <th>Dispozice</th>
-                                        <th>Plocha bytu</th>
-                                        <th>Cena bytu</th>
-                                        <th>Stav</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr id="row-501" class="status-volny" data-flat="501">
-                                        <td><strong>501</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>43,62 m²</td>
-                                        <td>7 700 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-502" class="status-rezervovano" data-flat="502">
-                                        <td><strong>502</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>32,60 m²</td>
-                                        <td>11 500 000 Kč</td>
-                                        <td><span class="status reserved">Rezervováno</span></td>
-                                    </tr>
-                                    <tr id="row-503" class="status-volny" data-flat="503">
-                                        <td><strong>503</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>30,70 m²</td>
-                                        <td>7 800 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-504" class="status-volny" data-flat="504">
-                                        <td><strong>504</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>33,40 m²</td>
-                                        <td>16 900 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-505" class="status-volny" data-flat="505">
-                                        <td><strong>505</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>35,30 m²</td>
-                                        <td>7 200 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-506" class="status-volny" data-flat="506">
-                                        <td><strong>506</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>27,25 m²</td>
-                                        <td>12 800 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-507" class="status-rezervovano" data-flat="507">
-                                        <td><strong>507</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>29,32 m²</td>
-                                        <td>5 300 000 Kč</td>
-                                        <td><span class="status reserved">Rezervováno</span></td>
-                                    </tr>
-                                    <tr id="row-508" class="status-volny" data-flat="508">
-                                        <td><strong>508</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>30,83 m²</td>
-                                        <td>8 600 000 Kč</td>
-                                        <td><span class="status available">Volný</span></td>
-                                    </tr>
-                                    <tr id="row-509" class="status-prodano" data-flat="509">
-                                        <td><strong>509</strong></td>
-                                        <td>5NP</td>
-                                        <td>1+kk</td>
-                                        <td>28,81 m²</td>
-                                        <td>21 500 000 Kč</td>
-                                        <td><span class="status"
-                                                style="background:#eeeeee;color:#999999;text-decoration:line-through">Prodáno</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <article class="bento__item bento__item--green">
+                        <div class="bento__content">
+                            <h3>Třída B</h3>
+                            <p>Budova s <strong>velmi úsporným</strong> modelem provozu. Nižší spotřeba, šetrnější k životnímu prostředí i vaší peněžence.</p>
                         </div>
-                    </div>
+                    </article>
+
+                    <article class="bento__item bento__item--layouts">
+                        <div class="bento__content">
+                            <h3>Variabilita pro každého</h3>
+                            <p>Naše portfolio začíná startovacími <br><strong>1+kk</strong> byty a graduje do prémiových rodinných <strong>4+kk</strong> s terasami.</p>
+                        </div>
+                    </article>
+
+                    <article class="bento__item bento__item--parking">
+                        <div class="bento__content">
+                            <h3>Komfortní parkování</h3>
+                            <p>Žádný stres. K jednotkám nabízíme venkovní stání přímo ve dvoře nebo privátní stání v suterénní garáži.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- SEKCE 4: STANDARDY -->
-        <section id="standardy" class="section-padding">
-            <div class="text-center">
-                <h2>Standardy</h2>
-                <p>Prémiové pojetí materiálů a dotyk tiché luxusní estetiky.</p>
-                <div
-                    style="height: 300px; border: 1px dashed rgba(44,62,80,0.3); border-radius: 8px; display: flex; justify-content: center; align-items: center; margin-top: 2rem;">
-                    <em>Obsah standardů v přípravě...</em>
+        <!-- Výběr Bytů - Inventory Matrix -->
+        <section class="inventory" id="jednotky">
+            <div class="container">
+                <header class="inventory__header">
+                    <h2 class="section-title">Vyberte si svůj nový domov</h2>
+                    
+                    <div class="inventory__filters js-filters">
+                        <button class="filter-btn active" data-filter="all">Všechny byty</button>
+                        <button class="filter-btn" data-filter="1+kk">1+kk</button>
+                        <button class="filter-btn" data-filter="2+kk">2+kk</button>
+                        <button class="filter-btn" data-filter="3+kk">3+kk</button>
+                        <button class="filter-btn" data-filter="4+kk">4+kk</button>
+                    </div>
+                </header>
+
+                <!-- Table Header for Desktop -->
+                <div class="inventory__labels">
+                    <div>Dispozice</div>
+                    <div>Podlaží</div>
+                    <div>Podlahová plocha</div>
+                    <div>Cena</div>
+                    <div>Stav</div>
+                    <div></div>
+                </div>
+
+                <!-- Jednotky se vygenerují JavaScriptem -->
+                <div class="inventory__list js-inventory-list">
+                    <!-- Placeholder -> will be populated by JS -->
                 </div>
             </div>
         </section>
 
-        <!-- SEKCE 5: LOKALITA -->
-        <section id="lokalita" class="section-padding">
-            <div class="text-center">
-                <h2>Lokalita</h2>
-                <p>Propojení tepající Prahy s klidem Prokopského údolí.</p>
-                <div
-                    style="height: 300px; border: 1px dashed rgba(44,62,80,0.3); border-radius: 8px; display: flex; justify-content: center; align-items: center; margin-top: 2rem;">
-                    <em>Mapa lokality v přípravě...</em>
+        <!-- Modál s Půdorysem -->
+        <div class="modal js-modal">
+            <div class="modal__overlay js-modal-close"></div>
+            <div class="modal__content">
+                <button class="modal__close js-modal-close" aria-label="Zavřít">&times;</button>
+                <div class="modal__body">
+                    <!-- Dinamicky plneno -->
+                    <h3 class="modal__title js-modal-title">Půdorys</h3>
+                    <div class="modal__image-wrapper">
+                        <!-- Placeholder vizualizace pudorysu -->
+                        <div class="modal__placeholder">
+                            <p>Interaktivní 3D půdorys<br>(Zástupný prostor)</p>
+                        </div>
+                    </div>
+                    <div class="modal__info js-modal-data"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lokace & Mapa -->
+        <section class="location" id="lokace">
+            <div class="container">
+                <div class="location__grid">
+                    <div class="location__content">
+                        <h2 class="section-title">Prestižní adresa. <br>Vše na dosah ruky.</h2>
+                        <p class="location__desc">Jižní Předměstí se v posledních letech profiluje jako jedna z <strong>nejlukrativnějších čtvrtí Plzně</strong>.</p>
+                        <ul class="location__features">
+                            <li><strong>Centrum za minutu:</strong> Pouhých 700 metrů vás dělí od historického náměstí Republiky.</li>
+                            <li><strong>Investiční potenciál:</strong> Centrální poloha se stabilním růstem cen.</li>
+                            <li><strong>Plná vybavenost:</strong> Školy, školky, zdravotnická zařízení i kultura – vše v pěší dostupnosti.</li>
+                        </ul>
+                    </div>
+                    <div class="location__map-container">
+                        <!-- Zástupný Iframe Google Mapy / API -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2576.994017770932!2d13.371285215707767!3d49.74239857938392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470af1e3c8ebd4fb%3A0xe7a50fbb8d6cb82e!2zUG9kxJticmFkb3ZhLCBQbHplxYg!5e0!3m2!1scs!2scz!4v1684930123456!5m2!1scs!2scz" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Mapa lokality - Rezidence Kovářská Poděbradova">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- SEKCE 6: KONTAKT (FOOTER) -->
-    <footer id="kontakt">
-        <div style="margin-bottom: 2rem;">
-            <h2>Zaujal vás tento projekt?</h2>
-            <p>Spojte se s námi pro nezávaznou prezentaci vybraných bytů.</p>
+    <!-- Patička a Kontakt -->
+    <footer class="footer" id="kontakt">
+        <div class="container container--contact">
+            <div class="footer__grid">
+                
+                <div class="footer__brand">
+                    <h2 class="footer__title">Udělejte první krok <br>k novému bydlení</h2>
+                    <p class="footer__desc">Náš tým je připraven vám zodpovědět veškeré dotazy, ať už ohledně standardů bydlení, možností financování nebo klientských změn.</p>
+                    
+                    <div class="footer__contact-info">
+                        <p><strong>Oficiální prodejce projektu:</strong></p>
+                        <p class="footer__address">
+                            Broker Consulting, a.s.<br>
+                            Jiráskovo náměstí 2, 326 00 Plzeň
+                        </p>
+                        <div class="footer__links">
+                            <a href="tel:800100164" class="footer__phone">Tel: 800 100 164</a>
+                            <a href="mailto:realityspolu@bcas.cz" class="footer__email">E-mail: realityspolu@bcas.cz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__form-wrapper">
+                    <form class="form js-contact-form" action="#" method="POST">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Jméno a příjmení</label>
+                            <input type="text" id="name" name="name" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">E-mailová adresa</label>
+                            <input type="email" id="email" name="email" class="form__input" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="phone" class="form__label">Telefonní číslo</label>
+                            <input type="tel" id="phone" name="phone" class="form__input" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="message" class="form__label">Vaše zpráva (volitelné)</label>
+                            <textarea id="message" name="message" class="form__input form__textarea" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full">Odeslat nezávaznou poptávku</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                &copy; 2026 Broker Consulting, a.s. | Všechna práva vyhrazena. Design pro Rezidence Kovářská / Poděbradova.
+            </div>
         </div>
-        <p>&copy; 2026 Zlíchovské Výhledy. Všechna práva vyhrazena.</p>
     </footer>
 
-    <!-- Element pro Tooltip -->
-    <div id="apartment-tooltip">
-        <span class="tt-id" id="tt-id">Byt</span>
-        <span class="tt-disp" id="tt-disp">Dispozice</span>
-        <span class="tt-price" id="tt-price">Cena</span>
-        <span class="tt-action">Kliknutím rolovat na detail v tabulce</span>
-    </div>
-
-    <!-- Náš sdílený Menu JS (jestli tam ještě je logika) -->
-    <script src="script.js"></script>
-
-    <!-- JS Propojení SVG a Tabulky -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Logika přepínání podlaží
-            const floorBtns = document.querySelectorAll('.floor-btn');
-            const tableContainers = document.querySelectorAll('.floor-table-container');
-            const svgMaps = document.querySelectorAll('.floor-svg');
-
-            floorBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    floorBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-
-                    const targetFloor = btn.getAttribute('data-floor');
-
-                    // Tabulky 
-                    tableContainers.forEach(container => {
-                        container.style.display = (container.id === 'table-' + targetFloor) ? 'block' : 'none';
-                    });
-
-                    // SVG Mapy
-                    svgMaps.forEach(svg => {
-                        svg.style.display = (svg.id === 'svg-' + targetFloor) ? 'block' : 'none';
-                    });
-                });
-            });
-
-            // Propojení Hover a Click (SVG <-> Tabulka a Tooltip)
-            const allRows = document.querySelectorAll('.inventory-table tbody tr');
-            const allFlats = document.querySelectorAll('.svg-flat');
-
-            const tooltip = document.getElementById('apartment-tooltip');
-            const ttId = document.getElementById('tt-id');
-            const ttDisp = document.getElementById('tt-disp');
-            const ttPrice = document.getElementById('tt-price');
-
-            // Najetí na řádek v tabulce zvýrazní SVG
-            allRows.forEach(row => {
-                row.addEventListener('mouseenter', () => {
-                    const flatId = row.getAttribute('data-flat');
-                    if (flatId) {
-                        const targetFlat = document.getElementById('flat-' + flatId);
-                        if (targetFlat) targetFlat.classList.add('highlight');
-                    }
-                });
-                row.addEventListener('mouseleave', () => {
-                    const flatId = row.getAttribute('data-flat');
-                    if (flatId) {
-                        const targetFlat = document.getElementById('flat-' + flatId);
-                        if (targetFlat) targetFlat.classList.remove('highlight');
-                    }
-                });
-            });
-
-            // Najetí na SVG zvýrazní řádek v tabulce a TOOLTIP
-            allFlats.forEach(flat => {
-                flat.addEventListener('mouseenter', (e) => {
-                    const flatId = flat.getAttribute('data-flat');
-                    const disp = flat.getAttribute('data-disp');
-                    const price = flat.getAttribute('data-price');
-
-                    if (flatId) {
-                        const targetRow = document.getElementById('row-' + flatId);
-                        // Zvýraznění řádku specifickou barvou
-                        if (targetRow) targetRow.style.backgroundColor = '#fdf8ec';
-
-                        // Zobrazení tooltipu
-                        if (disp && price) {
-                            ttId.textContent = 'Byt ' + flatId;
-                            ttDisp.textContent = disp;
-                            ttPrice.textContent = price;
-                            tooltip.classList.add('show');
-                        }
-                    }
-                });
-
-                flat.addEventListener('mousemove', (e) => {
-                    tooltip.style.left = (e.pageX + 15) + 'px';
-                    tooltip.style.top = (e.pageY + 15) + 'px';
-                });
-
-                flat.addEventListener('mouseleave', () => {
-                    const flatId = flat.getAttribute('data-flat');
-                    if (flatId) {
-                        const targetRow = document.getElementById('row-' + flatId);
-                        if (targetRow) targetRow.style.backgroundColor = '';
-                    }
-                    tooltip.classList.remove('show');
-                });
-
-                flat.addEventListener('click', () => {
-                    const flatId = flat.getAttribute('data-flat');
-                    if (flatId) {
-                        // Nalezení řádku a plynulé odrolování (scrollIntoView)
-                        const targetRow = document.getElementById('row-' + flatId);
-                        if (targetRow) {
-                            targetRow.style.backgroundColor = '#fdf8ec'; // zvýraznění akcentní barvou
-                            targetRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                            // Pouze krátký flash na potvrzení kliku, potom necháme fdf8ec
-                            setTimeout(() => {
-                                targetRow.style.backgroundColor = '';
-                            }, 1500);
-                        }
-
-                        // Simulovaný skok na detail bytu (Aktivuj přesměrování smazáním lomítek až budou připraveny podstránky)
-                        // window.location.href = `karta-bytu.html?id=${flatId}`; 
-                    }
-                });
-            });
-
-            // MULTI-SELECT FILTROVÁNÍ TABULKY
-            const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-            const allInventoryRows = document.querySelectorAll('.inventory-table tbody tr');
-
-            function applyFilters() {
-                const activeFilters = Array.from(filterCheckboxes)
-                    .filter(cb => cb.checked)
-                    .map(cb => cb.value);
-
-                allInventoryRows.forEach(row => {
-                    const isVisible = activeFilters.some(filterClass => row.classList.contains(filterClass));
-                    if (isVisible) {
-                        row.style.display = 'table-row';
-                    } else {
-                        row.style.display = 'none';
-                    }
-                });
-            }
-
-            filterCheckboxes.forEach(cb => {
-                cb.addEventListener('change', applyFilters);
-            });
-
-            applyFilters();
-        });
-    </script>
+    <!-- App Logic -->
+    <script src="js/main.js"></script>
 </body>
-
 </html>
